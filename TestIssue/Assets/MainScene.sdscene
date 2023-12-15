@@ -1,0 +1,153 @@
+!SceneAsset
+Id: 5854f5f9-8db4-46d8-91be-468119e266a9
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 7885942d-3697-4679-b8a1-e33743416aba
+        - ref!! 6b3a2439-9c31-4f6d-af6e-f36a93077e80
+        - ref!! 0d5552a0-d3d6-4030-8241-39ffbe6b6895
+        - ref!! 2808ef7f-dff7-4979-b25e-86355bd48185
+        - ref!! ccbc33c2-0215-4b2b-87a3-6d4aa4127de1
+        - ref!! a5270d7e-2443-4bc5-a077-3ec62b0eea1d
+        - ref!! d03d7479-ceff-4280-9c4e-39c2975d9c1b
+        - ref!! 5dd468df-abaf-485b-bdfa-e93a357529d1
+    Parts:
+        -   Entity:
+                Id: 0d5552a0-d3d6-4030-8241-39ffbe6b6895
+                Name: Skybox
+                Components:
+                    94262f660b3435c08ec138fe150000a7: !TransformComponent
+                        Id: a226d7eb-6058-4ba0-8bef-291cc928ad03
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    a9459013b15eb34d80e2fcf916fdf122: !BackgroundComponent
+                        Id: 1700f216-5ea1-411f-be6b-79a784714d9f
+                        Texture: 4c2fa078-4713-4750-bcc5-640a54cc47b5:Skybox texture
+                    df2f710c5c3380aa3afaf83b8a5fabb0: !LightComponent
+                        Id: 5cbc93f7-d40e-4ef7-9e2b-0f89b2905633
+                        Type: !LightSkybox
+                            Skybox: c3ef46c4-6426-4aa0-a1dd-c3ff6b4010a8:Skybox
+        -   Entity:
+                Id: 2808ef7f-dff7-4979-b25e-86355bd48185
+                Name: Ground
+                Components:
+                    17c90dab51d18eab7fca6b4d4cfac9a4: !TransformComponent
+                        Id: dc0d78d7-4e33-4403-afd0-c0bfb7f5cf65
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f44e9522f23680ae79bc1e0886aa72b1: !ModelComponent
+                        Id: 20b73b42-1dcb-4c55-b043-016642d69893
+                        Model: 94de9f83-ba4d-452b-86c4-7aa140a02b11:Ground
+                        Materials: {}
+        -   Entity:
+                Id: 5dd468df-abaf-485b-bdfa-e93a357529d1
+                Name: Entity
+                Components:
+                    8d3eb2839a7a2f3c59e155f702df799f: !TransformComponent
+                        Id: 24a886bc-2807-4b90-90b1-7928ee026006
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6b70c110034f9ccce13f0c945813a730: !TestIssue.TestA,TestIssue
+                        Id: 5a27bc3c-e293-43d1-8486-2bb1f638040c
+                        a: ref!! 3c67bf57-f249-4bc4-b0b7-08d873f4f248
+                        b: ref!! 3c67bf57-f249-4bc4-b0b7-08d873f4f248
+                    3369a7c9356064d120089ae3d7904f14: !TestIssue.TestA,TestIssue
+                        Id: 37575e29-a293-43b6-b57e-9020aca85343
+                        a: ref!! 3c67bf57-f249-4bc4-b0b7-08d873f4f248
+                        b: ref!! 2d309943-9221-4495-8791-dea664ae69c2
+        -   Entity:
+                Id: 6b3a2439-9c31-4f6d-af6e-f36a93077e80
+                Name: Directional light
+                Components:
+                    84abef7f959fd5293e4a60ec24225ea3: !TransformComponent
+                        Id: c3a8a7ab-0d11-42aa-99c3-aa2eac6b9660
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e80b2a684d158218bd9517a186b666a5: !LightComponent
+                        Id: f9b3e67e-3ae5-4039-b87a-494c26ab097c
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow: !LightDirectionalShadowMap
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Entity:
+                Id: 7885942d-3697-4679-b8a1-e33743416aba
+                Name: Camera
+                Components:
+                    2486d34ef2304c59fb352fd0fd9c6be5: !TransformComponent
+                        Id: 698e43eb-60ca-4fc3-934c-42a861e34733
+                        Position: {X: 2.6, Y: 0.6, Z: -1.0}
+                        Rotation: {X: 0.0, Y: 0.82903755, Z: 0.0, W: 0.5591929}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    18091963919ee3821f7e4372cd84799f: !CameraComponent
+                        Id: b0c9bc18-d967-4a67-9e8c-b1b26bc903e1
+                        Name: null
+                        Projection: Perspective
+                        Slot: ba041148-2d18-437e-af2c-75c696e13ed4
+                    40bc93a9e109c42bd23fb1421fbdd831: !TestIssue.BasicCameraController,TestIssue
+                        Id: 01843537-5412-47cc-b0d2-ded90fd065e3
+                        Gamepad: false
+                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
+                        TouchMovementSpeed: {X: 0.7, Y: 0.7, Z: 0.3}
+                        SpeedFactor: 5.0
+                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
+                        MouseRotationSpeed: {X: 1.0, Y: 1.0}
+                        TouchRotationSpeed: {X: 1.0, Y: 0.7}
+        -   Entity:
+                Id: a5270d7e-2443-4bc5-a077-3ec62b0eea1d
+                Name: EntityWb1
+                Components:
+                    de2587703ee3024f9afaebedcb0952f6: !TransformComponent
+                        Id: 8abeee1a-a8f0-422f-afa6-0403297eaffd
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    65ff5b7794aeb87c76ffc69ff374b413: !MyLib.TestB,MyLib
+                        Id: 3c67bf57-f249-4bc4-b0b7-08d873f4f248
+        -   Entity:
+                Id: ccbc33c2-0215-4b2b-87a3-6d4aa4127de1
+                Name: Sphere
+                Components:
+                    002cdc1a97fa0964281e33f8bcfca11f: !TransformComponent
+                        Id: fffd2354-b505-4b6e-9eca-9a2e2f810673
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    ea911cc90cd9ec637150681d20ec2475: !ModelComponent
+                        Id: bde22e16-fe8b-4e83-9c11-93b4b5816bd8
+                        Model: d26c5916-949d-4585-99ed-651e166531ae:Sphere
+                        Materials: {}
+        -   Entity:
+                Id: d03d7479-ceff-4280-9c4e-39c2975d9c1b
+                Name: EntityWb2
+                Components:
+                    de2587703ee3024f9afaebedcb0952f6: !TransformComponent
+                        Id: e0fc907b-a180-4a0f-be69-da434a5924b7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    0ec061387b93f13110dd7533daa04832: !MyLib.TestB,MyLib
+                        Id: 2d309943-9221-4495-8791-dea664ae69c2

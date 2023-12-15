@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Stride.Engine" Version="4.2.0.2043" />
+
+    <PackageReference Include="Stride.Video" Version="4.2.0.2043" />
+    <PackageReference Include="Stride.Physics" Version="4.2.0.2043" />
+    <PackageReference Include="Stride.Navigation" Version="4.2.0.2043" />
+    <PackageReference Include="Stride.Particles" Version="4.2.0.2043" />
+    <PackageReference Include="Stride.UI" Version="4.2.0.2043" />
+
+    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.2043" IncludeAssets="build;buildTransitive" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyLib\MyLib.csproj" />
+  </ItemGroup>
+</Project>
